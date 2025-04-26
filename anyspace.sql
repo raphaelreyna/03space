@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `blogs` (
   `title` varchar(255) NOT NULL,
   `kudos` int(11) default '0',
   `category` int(11) NOT NULL,
-  `privacy_level` int(11) NOT NULL,
+  `privacy_level` int(11) NOT NULL default '2',
   `pinned` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

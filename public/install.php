@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     `title` varchar(255) NOT NULL,
                     `kudos` int(11) DEFAULT '0',
                     `category` int(11) NOT NULL,
-                    `privacy_level` int(11) NOT NULL,
+                    `privacy_level` int(11) NOT NULL default '2',
                     `pinned` tinyint(1) NOT NULL DEFAULT '0',
                     PRIMARY KEY (`id`)
                 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;",
@@ -253,8 +253,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $conn->commit();
         } catch (Exception $e) {
-            $conn->rollback();
             echo "Installation failed: " . $e->getMessage();
+            $conn->rollback();
         }
 
         $conn = null;

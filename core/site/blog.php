@@ -23,7 +23,6 @@ function createBlogEntry($authorId, $postContent)
             $stmt->bindParam(5, $date, PDO::PARAM_STR);
 
             if ($stmt->execute()) {
-                echo "<p>Blog entry successfully published!</p>";
                 header("Location: user.php?id=" . $authorId);
             } else {
                 echo "<p>There was a problem posting your entry :(</p>";
