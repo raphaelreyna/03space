@@ -17,10 +17,7 @@ define("ADMIN_USER", $adminUser);
 // Set TimeZone (Time elapse will not display right if this doesn't match server)
 date_default_timezone_set('UTC');
 ?>
-
 <?php 
 // sorry >.< , will eventually combine includes into single file
 include("helper.php"); 
 ?>
-
-

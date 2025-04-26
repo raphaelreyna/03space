@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
             }
 
             .col.right {
-                width: 60%);
+                width: 60%;
                 margin: 0 auto;
             }
 
