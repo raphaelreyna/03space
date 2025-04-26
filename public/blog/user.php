@@ -47,7 +47,9 @@ $isUserAuthor = ($userId == $authorId);
             </div>
         </div>
         <div class="mood">
+            <?php if (!empty($statusInfo['mood'])): ?>
             <p><b>Mood:</b> <?= $statusInfo['mood'] ?></p><br>
+            <?php endif; ?>
             <p>
                 <b>View my:
                     <a href="../profile.php?id=<?= $authorId ?>">Profile</a>
