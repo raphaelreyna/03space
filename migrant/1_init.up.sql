@@ -1,12 +1,3 @@
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
-
 CREATE TABLE IF NOT EXISTS `blogcomments` (
   `id` int(11) NOT NULL auto_increment,
   `toid` int(11) NOT NULL,
@@ -135,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `user_id` int(11) NOT NULL,
   `user` varchar(50) NOT NULL,
   `last_logon` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `last_activity` timestamp NOT NULL default '0000-00-00 00:00:00',
+  `last_activity` timestamp NULL default NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -147,11 +138,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
-  `lastactive` datetime NOT NULL,
-  `lastlogon` datetime NOT NULL,
+  `lastactive` datetime NOT NULL default NOW(),
+  `lastlogon` datetime NOT NULL default NOW(),
   `bio` varchar(500) NOT NULL default '',
   `interests` varchar(500) NOT NULL default ' ',
-  `css` blob NOT NULL,
+  `css` blob,
   `music` varchar(255) NOT NULL default 'default.mp3',
   `pfp` varchar(255) NOT NULL default 'default.jpg',
   `currentgroup` varchar(255) NOT NULL default 'None',
@@ -160,7 +151,3 @@ CREATE TABLE IF NOT EXISTS `users` (
   `views` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+
+COPY ./core/tools/migrant /usr/local/bin/migrant
+
+ENTRYPOINT [ "/usr/local/bin/migrant", "/repo/migrant.yaml" ]

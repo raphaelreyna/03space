@@ -1,9 +1,4 @@
 <?php
-if (!file_exists("../core/config.php")) {
-    header("Location: install.php");
-    exit;
-}
-
 require("../core/conn.php");
 require("../core/settings.php");
 require("../core/site/user.php");

@@ -1,0 +1,6 @@
+dir: ./migrant
+database:
+  typed_config:
+    "@type": database.mysql
+    connString:
+      env: CONN_STRING

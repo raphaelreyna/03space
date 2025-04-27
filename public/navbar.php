@@ -4,37 +4,37 @@
     <div class="top">
       <div class="left">
         <a href="index.php">
-            <?= SITE_NAME ?>
-          </a> | <a href="index.php">Home</a>
-      </ul>
-    </div>
-    <div class="center">
+          <?= SITE_NAME ?>
+        </a> | <a href="index.php">Home</a>
+        </ul>
+      </div>
+      <div class="center">
 
-      <form>
+        <!-- BEGIN SEARCH FORM -->
+        <form>
+          <label>
+            <?= htmlspecialchars(SITE_NAME); ?>
+          </label>
 
+          <label>
+            <input type="text" name="search">
+          </label>
 
-        <label>
-          <?= htmlspecialchars(SITE_NAME); ?>
-        </label>
-
-        <label>
-          <input type="text" name="search">
-        </label>
-
-        <input class="submit-btn" type="submit" name="submit-button" value="Search">
-      </form>
-</div>
-  <div class="right">
-      <ul class="topnav signup">
-        <?php if (isset($_SESSION['user'])): ?>
-          <a href="docs/help.html">Help</a> | <a href="logout.php">LogOut</a>
-        <?php else: ?>
-          <a href="docs/help.html">Help</a> |
-          <a href="login.php">LogIn</a> |
-          <a href="register.php">SignUp</a>
-        <?php endif; ?>
-      </ul>
-        </div>
+          <input class="submit-btn" type="submit" name="submit-button" value="Search">
+        </form>
+        <!-- END SEARCH FORM -->
+      </div>
+      <div class="right">
+        <ul class="topnav signup">
+          <?php if (isset($_SESSION['user'])): ?>
+            <a href="docs/help.html">Help</a> | <a href="logout.php">LogOut</a>
+          <?php else: ?>
+            <a href="docs/help.html">Help</a> |
+            <a href="login.php">LogIn</a> |
+            <a href="register.php">SignUp</a>
+          <?php endif; ?>
+        </ul>
+      </div>
     </div>
     <ul class="links">
       <?php
@@ -71,8 +71,5 @@
       ?>
     </ul>
   </nav>
-
-
-
 </header>
 <!-- END HEADER -->
