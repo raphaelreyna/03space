@@ -60,7 +60,7 @@
         'Favs' => 'favorites.php',
         'Email' => 'email.php',
         'Database' => 'database.php',
-        'Source' => 'https://github.com/superswan/anyspace',
+        'Source' => $repoUrl,
         'Help' => 'docs/help.html',
         'About' => 'about.php',
       );

@@ -39,9 +39,10 @@ services:
       - DB_USERNAME=rimuser
       - DB_PASSWORD=rimpass
       - DB_NAME=rimspace
-      - SITE_NAME="RimSpace-Dev"
+      - SITE_NAME=RimSpace-Dev
       - DOMAIN_NAME="10.1.0.200:8081"
       - ADMIN_USER_ID=1
+      - REPO_URL=https://github.com/raphaelreyna/03space
     depends_on:
       migration:
         condition: service_completed_successfully

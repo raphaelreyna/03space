@@ -2,7 +2,7 @@ server {
     listen 80;
     server_name admin.example.com;
 
-    root /var/www/anyspace/admin;
+    root /var/www/html/admin;
     index index.php index.html;
 
     location / {

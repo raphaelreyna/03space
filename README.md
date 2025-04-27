@@ -1,5 +1,5 @@
-# AnySpace 
-AnySpace is an Open Source Social Network platform similar to MySpace circa 2005-2007, designed with self-hosting in mind. A homage to the golden era of social networking, bringing back the simplicity and charm of early social media platforms with a focus on privacy, user experience, and community 
+# 03Space
+This project is fork of [anyspace](https://github.com/superswan/anyspace).
 
 Designed to be lightweight, user-friendly, and customizable, allowing users to express themselves just like in the old days but with the peace of mind that modern security practices bring.
 
@@ -109,6 +109,7 @@ project-root/
 
 ## Credits
 
+[AnySpace](https://github.com/superswan/anyspace)
 [MySpace](myspace.com) <br>
 [SpaceHey](spacehey.com) <br>
 [This spacemy.xyz codebase](https://github.com/Ahe4d/spacemy.xyz) <br>

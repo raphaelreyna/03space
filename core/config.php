@@ -32,4 +32,10 @@ $adminUser = $_ENV["ADMIN_USER_ID"];
 if (empty($adminUser)) {
     throw new RuntimeException("The environment variable 'ADMIN_USER_ID' must not be empty.");
 }
+
+$repoUrl = $_ENV["REPO_URL"];
+if (empty($repoUrl)) {
+    throw new RuntimeException("The environment variable 'REPO_URL' must not be empty.");
+}
+
 ?>

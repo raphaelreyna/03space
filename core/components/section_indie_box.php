@@ -4,6 +4,6 @@
                             host your own instance!
                         </p>
                         <p>
-                            <a href="https://github.com/superswan/anyspace/" class="more-details">[more details]</a>
+                            <a href="<?php echo $repoUrl; ?>" class="more-details">[more details]</a>
                         </p>
                     </div>

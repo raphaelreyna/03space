@@ -128,25 +128,7 @@ if (!$isUserAuthor) {
 
         </div>
       </div>
-    </main>
-    <footer>
-      <p>
-        <a href="https://github.com/superswan/anyspace/superswan/anyspace" target="_blank" rel="noopener">AnySpace
-          Engine</a>
-      </p>
-      <p> <i>Disclaimer: This project is not affiliated with MySpace&reg; in any way.</i>
-      </p>
-      <ul class="links">
-        <li><a href="about.php">About</a></li>
-        <li><a href="rules.php">Rules</a></li>
-        <li><a href="https://github.com/superswan/anyspace/superswan/anyspace">Source Code</a></li>
-      </ul>
-      <p class="copyright">
-        <a href="https://github.com/superswan/anyspace/superswan/anyspace/superswan/anyspace">&copy;2024 Copyleft</a>
-      </p>
-    </footer>
-
-    <!-- JQuery -->
+          <!-- JQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 
@@ -158,7 +140,5 @@ if (!$isUserAuthor) {
     <script src="editor/plugins/emoji/trumbowyg.emoji.min.js"></script>
     <script src="editor/plugins/pasteimage/trumbowyg.pasteimage.min.js"></script>
     <script src="editor.js"></script>
-
-</body>
-
-</html>
+    </main>
+    <?php require("../footer.php"); ?>

@@ -55,7 +55,7 @@
         'Groups' => '#',
         'Layouts' => '#',
         'Favs' => 'favorites.php',
-        'Source' => 'https://github.com/superswan/anyspace',
+        'Source' => $repoUrl,
         'Help' => 'docs/help.html',
         'About' => 'about.php',
       );

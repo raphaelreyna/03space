@@ -1,4 +1,4 @@
-# AnySpace Help
+# 03Space Help
 
 Here you will find support documentation on using the site. 
 
@@ -20,7 +20,7 @@ The "Layouts" feature allows you to customize the appearance of your profile pag
 
 We plan on supporting styles and layouts from other MySpace-like sites in the future (myspace, windows93, spacehey, spacemy.xyz, etc.)
 
-AnySpace is currently compatible with SpaceHey layouts. 
+03Space is currently compatible with SpaceHey layouts. 
 
 This covers the main sections of the profile page. You can further refine each rule based on your specific design preferences and the layout requirements of your page.
 
@@ -876,7 +876,7 @@ footer a:hover {
          - `.details`: Container for additional details about the user.
          - `.mood`: Section for the user's mood.
          - `.contact`: Section for contacting the user.
-         - `.url-info`: Section for displaying the user's AnySpace URL.
+         - `.url-info`: Section for displaying the user's 03Space URL.
          - `.table-section`: Section for displaying the user's interests.
        - `.blog-preview`: Section for displaying the user's latest blog entries.
        - `.friends`: Section for displaying the user's friends and friend-related content.

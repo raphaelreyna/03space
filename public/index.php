@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
                 <!-- MOTD -->
                 <div class="col right">
                     <div class="welcome">
-                        <p>Did you know...? AnySpace is OpenSource!</p>
+                        <p>Welcome to <?php echo $siteName; ?>!</p>
                     </div>
                     <div class="box">
                         <!-- Login/Signup Form -->

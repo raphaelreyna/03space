@@ -60,7 +60,7 @@ require("../core/config.php");
             </label>
             <p>full domain name</p><input type="text" maxlength="65" class="status_input"
                 id="category_mood" name="category[mood]" value="<?= $domainName ?>">
-            <p><b>Example:</b> <i>anyspace.3to.moe</i></p><br><label for="category_mood">
+            <p><b>Example:</b> <i><?php echo $domainName; ?></i></p><br><label for="category_mood">
                 <h3>Admin ID:</h3>
             </label>
             <p>ID only of admin user</p><input type="text" maxlength="65" class="status_input"
