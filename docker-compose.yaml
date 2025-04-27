@@ -2,10 +2,10 @@ version: "3.9"
 
 services:
   db:
-    image: mysql:latest      # MySQL-compatible, small, GPL-friendly
+    image: mysql:latest
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass      # ← change in .env or here
+      MYSQL_ROOT_PASSWORD: rootpass 
       MYSQL_DATABASE:   rimspace
       MYSQL_USER:       rimuser
       MYSQL_PASSWORD:   rimpass
@@ -52,7 +52,7 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - .:/usr/share/nginx/html
+      - .:/var/www/html
       - ./example.nginx:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
