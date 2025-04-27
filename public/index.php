@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
                         </div>
                     </div>
                     <!-- Music section -->
-                    <?php include("../core/components/section_music.php") ?>
+                    <?php if ($featureFlags["enableMusic"]) { include("../core/components/section_music.php"); } ?>
 
                     <!-- Announcements Section -->
                     <?php include("../core/components/section_announcements.php") ?>
