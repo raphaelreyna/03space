@@ -42,7 +42,7 @@
             }
 
             .col.right {
-                width: 60%);
+                width: 60%;
                 margin: 0 auto; 
             }
 
@@ -59,5 +59,5 @@
 
 <body>
     <div class="master-container">
-        <?php require_once("../core/components/navbar.php"); ?>
+        <?php require_once CORE_PATH . "/components/navbar.php"; ?>
         <main>

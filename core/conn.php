@@ -1,5 +1,9 @@
 <?php
 require_once("config.php");
+
+define('PUBLIC_PATH', dirname(__DIR__) . '/public');
+define('CORE_PATH', __DIR__);
+
 require("featureFlags.php");
 
 try {

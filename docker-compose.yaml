@@ -11,10 +11,25 @@ services:
       MYSQL_PASSWORD:   rimpass
     volumes:
       - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-u", "root", "-prootpass"]
       interval: 5s
       retries: 5
+
+  phpMyAdmin:
+    image: phpmyadmin:latest
+    restart: unless-stopped
+    ports:
+      - "8070:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: rimuser
+      PMA_PASSWORD: rimpass
+    depends_on:
+      - db
+  
   
   migration:
     image: raphaelreyna/migrant
