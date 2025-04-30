@@ -284,7 +284,7 @@ $statusInfo = fetchUserStatus($profileId);
                             </div>
                             <div class="f-row">
                                 <div class="f-col">
-                                    <a href="#" rel="nofollow">
+                                    <a href="/messages/new.php?to=<?= htmlspecialchars($userInfo['username']); ?>" rel="nofollow">
                                         <img src="static/icons/comment.png" class="icon" aria-hidden="true"
                                             loading="lazy" alt=""> Send Message
                                     </a>

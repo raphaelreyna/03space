@@ -106,7 +106,10 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `id` int(11) NOT NULL auto_increment,
   `toid` int(11) NOT NULL,
   `author` int(11) NOT NULL,
-  `msg` text NOT NULL,
+  `body` text NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` varchar(16) NOT NULL default 'unread',
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
