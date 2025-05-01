@@ -1,5 +1,6 @@
 <?php
 require_once("config.php");
+require_once("init.php");
 
 define('PUBLIC_PATH', dirname(__DIR__) . '/public');
 define('CORE_PATH', __DIR__);

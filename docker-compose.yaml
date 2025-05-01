@@ -30,7 +30,6 @@ services:
     depends_on:
       - db
   
-  
   migration:
     image: raphaelreyna/migrant
     environment:
@@ -49,6 +48,7 @@ services:
       context: .
     volumes:
       - ./:/var/www/html
+      - media:/tmp
     environment:
       - DB_HOST=db
       - DB_USERNAME=rimuser
@@ -58,6 +58,7 @@ services:
       - DOMAIN_NAME="10.1.0.200:8081"
       - ADMIN_USER_ID=1
       - REPO_URL=https://github.com/raphaelreyna/03space
+      - MEDIA_PATH=/tmp
     depends_on:
       migration:
         condition: service_completed_successfully
@@ -69,9 +70,11 @@ services:
       - "8081:80"
     volumes:
       - .:/var/www/html
+      - media:/tmp
       - ./example.nginx:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
 
 volumes:
+  media:
   db_data:

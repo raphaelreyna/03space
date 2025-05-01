@@ -38,4 +38,14 @@ if (empty($repoUrl)) {
     throw new RuntimeException("The environment variable 'REPO_URL' must not be empty.");
 }
 
+$mediaPath = $_ENV["MEDIA_PATH"];
+if (empty($mediaPath)) {
+    throw new RuntimeException("The environment variable 'MEDIA_PATH' must not be empty.");
+}
+$mediaPath = rtrim($mediaPath, '/');
+$mediaPath = realpath($mediaPath);
+if ($mediaPath === false) {
+    throw new RuntimeException("The environment variable 'MEDIA_PATH' must be a valid path.");
+}
+
 ?>

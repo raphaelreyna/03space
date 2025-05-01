@@ -6,7 +6,6 @@ require("../lib/password.php");
 
 $message = ''; // Variable to hold messages for the user
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($_POST['password']) && !empty($_POST['username']) && !empty($_POST['confirm'])) {
         if ($_POST['password'] !== $_POST['confirm'] || strlen($_POST['username']) > 21) {

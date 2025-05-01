@@ -36,6 +36,7 @@ function updateCSS($userId, $css) {
 
 function uploadFile($userId, $file, $targetDir, $validTypes) {
     global $conn;
+    global $mediaPath;
 
     if ($file['error'] !== UPLOAD_ERR_OK) {
         echo "Error uploading file: " . $file['error'];
@@ -53,7 +54,7 @@ function uploadFile($userId, $file, $targetDir, $validTypes) {
     $prefix = $targetDir == "media/pfp/" ? "pfp" : "mus";
     $uniqueId = generateUniqueId($prefix);
     $newFileName = $uniqueId . "." . $fileType;
-    $targetFile = $targetDir . $newFileName;
+    $targetFile = $mediaPath . "/" . $prefix . "/". $newFileName;
 
     if (move_uploaded_file($file["tmp_name"], $targetFile)) {
         $column = $targetDir == "media/pfp/" ? "pfp" : "music";
@@ -62,9 +63,9 @@ function uploadFile($userId, $file, $targetDir, $validTypes) {
         $_SESSION['uploadStatus'] = 'File uploaded successfully.';
         echo 'File uploaded successfully.<hr>';
         error_log('Uploaded file: ' . $newFileName . ' Orig: ' . $file['name'] . ' User: ' . fetchName($userId) . '(' . $userId . ')');
-        } else {
-            error_log('Failed to move uploaded file: ' . $file["name"]);
-            echo 'There was an error uploading your file.<hr>';
-        }
+    } else {
+        error_log('Failed to move uploaded file: ' . $file["name"]);
+        echo 'There was an error uploading your file.<hr>';
+    }
 }
 
